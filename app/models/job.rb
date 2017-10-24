@@ -1,6 +1,8 @@
 class Job < ApplicationRecord
   validates :title, presence: true
 
+  has_many :resume
+
   def publish!
     self.is_hidden = false
     self.save
