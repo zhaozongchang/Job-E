@@ -14,6 +14,8 @@ class JobsController < ApplicationController
     @jobs = Job.where(:is_hidden => false).order("created_at DESC")
   end
 
+
+
   def new
     @job = Job.new
   end
